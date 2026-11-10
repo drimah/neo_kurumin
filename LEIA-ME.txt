@@ -1,0 +1,37 @@
+NEO KURUMIN LAB v0.1
+====================
+Cria uma máquina virtual com o Neo Kurumin, no Windows ou no Linux Mint.
+Base: Kubuntu 26.04 LTS + visual NK + painel Ícones Mágicos.
+
+PASSO 1 - CRIAR A MÁQUINA
+  Windows:  dois cliques em INSTALAR-WINDOWS.bat
+  Linux:    abra o terminal nesta pasta e cole:
+            bash instalar-linux.sh
+
+  Ele instala a VirtualBox, baixa o Kubuntu 26.04 (~5 GB, confere se
+  veio perfeito) e liga a máquina "Neo Kurumin".
+
+PASSO 2 - INSTALAR O KUBUNTU NA MÁQUINA (uns 15 minutos)
+  1. Na tela do Kubuntu, escolha "Português (Brasil)" e "Instalar Kubuntu".
+  2. Teclado: Português (Brasil) ABNT2.
+  3. Tipo de instalação: "Apagar disco" (é o disco virtual de 60 GB,
+     o seu computador de verdade NÃO é mexido).
+  4. Crie seu usuário e senha. Espere terminar e clique em "Reiniciar".
+  5. Se voltar para o instalador: feche a máquina, rode o PASSO 1 de novo
+     e responda "S" (ele tira o DVD do Kubuntu e liga a máquina).
+
+PASSO 3 - VIRAR NEO KURUMIN
+  Dentro da máquina, abra o Konsole (terminal) e cole:
+
+    udisksctl mount -b /dev/disk/by-label/NEOKURUMIN; bash /media/$USER/NEOKURUMIN/instalar.sh
+
+  Ele aplica o visual NK, o painel flutuante e instala os Ícones Mágicos.
+  No fim, responda "s" para reiniciar.
+
+LIMITES DA MÁQUINA VIRTUAL
+  - Serve para testar visual, painel e instalações.
+  - Android (Waydroid) e jogos podem ficar lentos ou não abrir dentro da
+    VM, porque a placa de vídeo é virtual. No PC de verdade funcionam melhor.
+  - Para o Android, entre na sessão "Plasma (Wayland)" na tela de login.
+
+Os arquivos da máquina ficam em:  (sua pasta de usuário)\NeoKurumin-Lab
